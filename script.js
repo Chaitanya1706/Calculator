@@ -1,7 +1,7 @@
 var btns = document.getElementsByClassName('btn');
 var display = document.getElementById('display-value')
 var operator_value = document.getElementById('operator-value')
-var operand1 = 0;
+var operand1 = null;
 var operand2 = null;
 var operator = null;
 var flag = false;
@@ -13,13 +13,13 @@ function run(){
     if(value=='AC'){
         display.innerText = '';
         operator_value.innerText = '';
-        operand1 = 0;
+        operand1 = null;
         operand2 = null;
         operator = null;
         op=null;
     }
 
-    else if(value=='+' || value=='-' || value=='*' || value=='/' || value=='%'){
+    else if(value=='-' || value=='+' || value=='*' || value=='/' || value=='%'){
         if(op!=null){
             operator = value;
             operator_value.innerText = operator;
