@@ -5,6 +5,7 @@ var operand1 = 0;
 var operand2 = null;
 var operator = null;
 var flag = false;
+var op = null;
 
 function run(){
     var value = this.getAttribute('data-value');
@@ -15,15 +16,17 @@ function run(){
         operand1 = 0;
         operand2 = null;
         operator = null;
+        op=null;
     }
 
-    if(value=='+' || value=='-' || value=='*' || value=='/' || value=='%'){
-        if(operator!=null){
+    else if(value=='+' || value=='-' || value=='*' || value=='/' || value=='%'){
+        if(op!=null){
             operator = value;
             operator_value.innerText = operator;
         }
         else{
             operator = value;
+            op = value;
             flag = true;
             if(display.innerText=='' || display.innerText=='AC'){
                 display.innerText = 'Error';
@@ -44,7 +47,7 @@ function run(){
         display.innerText = ans;
     }
     else{
-    
+        op = null;
         if(display.innerText=='Error' || display.innerText=='AC'){
             display.innerText = '';
         }
