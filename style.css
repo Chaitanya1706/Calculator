@@ -1,0 +1,100 @@
+*{
+    /* margin: 0px; */
+    padding: 0px;
+}
+
+#calculator{
+    width: 300px;
+    height: 400px;
+    /* background-color: bisque; */
+    border: 2px solid black;
+}
+
+#display{
+    width: 100%;
+    height: 20%;
+    /* background-color: whitesmoke; */
+    position: relative;
+
+}
+
+#display-value{
+    font-size: 2rem;
+    position: absolute; 
+}
+
+#operator-value{
+    position: absolute;
+    left: 280px;
+    top: 50px;
+    font-weight: 800;
+}
+
+#buttons{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+    /* background-color: blueviolet; */
+}
+.row{
+    
+    flex: 1;
+    height: 40px;
+    display: flex;
+
+    /* justify-content: center; */
+    /* background-color: royalblue; */
+    /* border: 1px solid black; */
+}
+
+.btn{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 23.3%; */
+    height: 100%;
+    background-color: gray;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    font-weight: 800;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    
+}
+.btn span{
+    /* border: 1px solid black; */
+    
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+/* .last-row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+} */
+
+
+
+.half{
+    width: 50% !important;
+    
+}
+
+
+.red {
+    background-color: rgb(189, 32, 32);
+}
+.red:hover{
+    background-color: rgb(167, 8, 8);
+}
+#data{
+    margin: 10px;
+}
